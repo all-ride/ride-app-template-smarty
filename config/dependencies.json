@@ -1,0 +1,86 @@
+{
+    "dependencies": [
+        {
+            "class": "pallo\\library\\template\\SmartyResourceHandler",
+            "id": "smarty",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "system.directory.view.smarty",
+                                "default": "view/smarty"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setTheme",
+                    "arguments": [
+                        {
+                            "name": "theme",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "template.theme",
+                                "default": "default"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "pallo\\library\\system\\file\\File",
+            "id": "smarty.compile",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "template.directory.compile.smarty"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "interfaces": "pallo\\library\\template\\TemplateEngine",
+            "class": "pallo\\library\\template\\SmartyTemplateEngine",
+            "id": "smarty",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "compileDirectory",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "pallo\\library\\system\\file\\File",
+                                "id": "smarty.compile"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "addPluginDirectory",
+                    "arguments": [
+                        {
+                            "name": "directory",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "template.smarty.plugin"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

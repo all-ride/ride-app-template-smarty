@@ -1,0 +1,16 @@
+{
+    "name": "pallo/app-template-smarty",
+    "description": "Smarty template engine integration for a Pallo application.",
+    "license": "MIT",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Joris Vandeweerd",
+            "email": "joris@statik.be"
+        }
+    ],
+    "require": {
+        "pallo/app": ">=0.4.0",
+        "pallo/lib-template-smarty": ">=0.1.0"
+    }
+}
