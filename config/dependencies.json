@@ -1,7 +1,7 @@
 {
     "dependencies": [
         {
-            "class": "pallo\\library\\template\\SmartyResourceHandler",
+            "class": "pallo\\library\\template\\engine\\SmartyResourceHandler",
             "id": "smarty",
             "calls": [
                 {
@@ -13,19 +13,6 @@
                             "properties": {
                                 "key": "system.directory.view.smarty",
                                 "default": "view/smarty"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "method": "setTheme",
-                    "arguments": [
-                        {
-                            "name": "theme",
-                            "type": "parameter",
-                            "properties": {
-                                "key": "template.theme",
-                                "default": "default"
                             }
                         }
                     ]
@@ -43,7 +30,7 @@
                             "name": "path",
                             "type": "parameter",
                             "properties": {
-                                "key": "template.directory.compile.smarty"
+                                "key": "template.smarty.directory.compile"
                             }
                         }
                     ]
@@ -51,8 +38,8 @@
             ]
         },
         {
-            "interfaces": "pallo\\library\\template\\TemplateEngine",
-            "class": "pallo\\library\\template\\SmartyTemplateEngine",
+            "interfaces": "pallo\\library\\template\\engine\\Engine",
+            "class": "pallo\\library\\template\\engine\\SmartyEngine",
             "id": "smarty",
             "calls": [
                 {
