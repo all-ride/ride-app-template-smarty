@@ -30,7 +30,8 @@ class SmartyCacheControl extends AbstractCacheControl {
 
     /**
      * Constructs a new translation cache control
-     * @param pallo\library\config\Config $config
+     * @param pallo\library\template\engine\SmartyEngine $engine
+     * @param pallo\library\system\file\FileSystem $fileSystem
      * @return null
      */
     public function __construct(SmartyEngine $engine, FileSystem $fileSystem) {
