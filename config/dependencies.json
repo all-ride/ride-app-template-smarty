@@ -38,7 +38,7 @@
             ]
         },
         {
-            "interfaces": "pallo\\library\\template\\engine\\Engine",
+            "interfaces": ["pallo\\library\\template\\engine\\Engine", "pallo\\library\\template\\engine\\SmartyEngine"], 
             "class": "pallo\\library\\template\\engine\\SmartyEngine",
             "id": "smarty",
             "calls": [
@@ -68,6 +68,11 @@
                     ]
                 }
             ]
-        }
+        },
+        {
+            "interfaces": "pallo\\application\\cache\\control\\CacheControl",
+            "class": "pallo\\application\\cache\\control\\SmartyCacheControl",
+            "id": "smarty"
+        }         
     ]
 }
