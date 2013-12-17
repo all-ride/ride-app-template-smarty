@@ -2,7 +2,7 @@
     "name": "pallo/app-template-smarty",
     "description": "Smarty template engine integration for a Pallo application.",
     "license": "MIT",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "authors": [
         {
             "name": "Joris Vandeweerd",
@@ -13,5 +13,10 @@
         "pallo/app": ">=0.4.0",
         "pallo/app-template": ">=0.1.0",
         "pallo/lib-template-smarty": ">=0.2.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "pallo\\application\\cache\\control\\": ["src/"]
+        }
     }
 }
