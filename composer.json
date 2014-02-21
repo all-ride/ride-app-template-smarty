@@ -1,6 +1,6 @@
 {
-    "name": "pallo/app-template-smarty",
-    "description": "Smarty template engine integration for a Pallo application.",
+    "name": "ride/app-template-smarty",
+    "description": "Smarty template engine integration for a Ride application.",
     "license": "MIT",
     "version": "0.3.2",
     "authors": [
@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "pallo/app": ">=0.4.0",
-        "pallo/app-template": ">=0.1.0",
-        "pallo/lib-template-smarty": ">=0.2.0"
+        "ride/app": ">=0.4.0",
+        "ride/app-template": ">=0.1.0",
+        "ride/lib-template-smarty": ">=0.2.0"
     },
     "autoload": {
         "psr-0": {
-            "pallo\\application\\cache\\control\\": ["src/"]
+            "ride\\application\\cache\\control\\": ["src/"]
         }
     }
 }

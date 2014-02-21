@@ -1,7 +1,7 @@
 {
     "dependencies": [
         {
-            "class": "pallo\\library\\template\\engine\\SmartyResourceHandler",
+            "class": "ride\\library\\template\\engine\\SmartyResourceHandler",
             "id": "smarty",
             "calls": [
                 {
@@ -20,7 +20,7 @@
             ]
         },
         {
-            "class": "pallo\\library\\system\\file\\File",
+            "class": "ride\\library\\system\\file\\File",
             "id": "smarty.compile",
             "calls": [
                 {
@@ -38,8 +38,8 @@
             ]
         },
         {
-            "interfaces": ["pallo\\library\\template\\engine\\Engine", "pallo\\library\\template\\engine\\SmartyEngine"], 
-            "class": "pallo\\library\\template\\engine\\SmartyEngine",
+            "interfaces": ["ride\\library\\template\\engine\\Engine", "ride\\library\\template\\engine\\SmartyEngine"], 
+            "class": "ride\\library\\template\\engine\\SmartyEngine",
             "id": "smarty",
             "calls": [
                 {
@@ -49,7 +49,7 @@
                             "name": "compileDirectory",
                             "type": "dependency",
                             "properties": {
-                                "interface": "pallo\\library\\system\\file\\File",
+                                "interface": "ride\\library\\system\\file\\File",
                                 "id": "smarty.compile"
                             }
                         }
@@ -70,8 +70,8 @@
             ]
         },
         {
-            "interfaces": "pallo\\application\\cache\\control\\CacheControl",
-            "class": "pallo\\application\\cache\\control\\SmartyCacheControl",
+            "interfaces": "ride\\application\\cache\\control\\CacheControl",
+            "class": "ride\\application\\cache\\control\\SmartyCacheControl",
             "id": "smarty"
         }         
     ]
