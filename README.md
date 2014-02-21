@@ -1,3 +1,3 @@
-# Pallo: Template (Smarty)
+# Ride: Template (Smarty)
 
-Integration of the Smarty template engine with a Pallo application.
+Integration of the Smarty template engine with a Ride application.
