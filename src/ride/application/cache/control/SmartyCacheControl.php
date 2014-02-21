@@ -1,9 +1,9 @@
 <?php
 
-namespace pallo\application\cache\control;
+namespace ride\application\cache\control;
 
-use pallo\library\template\engine\SmartyEngine;
-use pallo\library\system\file\FileSystem;
+use ride\library\template\engine\SmartyEngine;
+use ride\library\system\file\FileSystem;
 
 /**
  * Cache control implementation for Smarty
@@ -18,20 +18,20 @@ class SmartyCacheControl extends AbstractCacheControl {
 
     /**
      * Instance of the Smarty template engine
-     * @var pallo\library\template\engine\SmartyEngine
+     * @var ride\library\template\engine\SmartyEngine
      */
     private $engine;
 
     /**
      * Instance of the file system
-     * @var pallo\library\system\file\FileSystem
+     * @var ride\library\system\file\FileSystem
      */
     private $fileSystem;
 
     /**
      * Constructs a new translation cache control
-     * @param pallo\library\template\engine\SmartyEngine $engine
-     * @param pallo\library\system\file\FileSystem $fileSystem
+     * @param ride\library\template\engine\SmartyEngine $engine
+     * @param ride\library\system\file\FileSystem $fileSystem
      * @return null
      */
     public function __construct(SmartyEngine $engine, FileSystem $fileSystem) {
