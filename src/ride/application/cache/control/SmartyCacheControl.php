@@ -18,20 +18,20 @@ class SmartyCacheControl extends AbstractCacheControl {
 
     /**
      * Instance of the Smarty template engine
-     * @var ride\library\template\engine\SmartyEngine
+     * @var \ride\library\template\engine\SmartyEngine
      */
     private $engine;
 
     /**
      * Instance of the file system
-     * @var ride\library\system\file\FileSystem
+     * @var \ride\library\system\file\FileSystem
      */
     private $fileSystem;
 
     /**
      * Constructs a new translation cache control
-     * @param ride\library\template\engine\SmartyEngine $engine
-     * @param ride\library\system\file\FileSystem $fileSystem
+     * @param \ride\library\template\engine\SmartyEngine $engine
+     * @param \ride\library\system\file\FileSystem $fileSystem
      * @return null
      */
     public function __construct(SmartyEngine $engine, FileSystem $fileSystem) {
