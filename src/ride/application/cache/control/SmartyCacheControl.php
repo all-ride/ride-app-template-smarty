@@ -48,8 +48,8 @@ class SmartyCacheControl extends AbstractCacheControl {
     }
 
     /**
-	 * Clears this cache
-	 * @return null
+     * Clears this cache
+     * @return null
      */
     public function clear() {
         $directory = $this->fileSystem->getFile($this->engine->getSmarty()->compile_dir);
