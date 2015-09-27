@@ -70,7 +70,7 @@
             ]
         },
         {
-            "interfaces": "ride\\application\\cache\\control\\CacheControl",
+            "interfaces": "ride\\library\\cache\\control\\CacheControl",
             "class": "ride\\application\\cache\\control\\SmartyCacheControl",
             "id": "smarty"
         }         
