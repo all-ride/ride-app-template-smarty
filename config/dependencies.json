@@ -38,7 +38,7 @@
             ]
         },
         {
-            "interfaces": ["ride\\library\\template\\engine\\Engine", "ride\\library\\template\\engine\\SmartyEngine"], 
+            "interfaces": ["ride\\library\\template\\engine\\Engine", "ride\\library\\template\\engine\\SmartyEngine"],
             "class": "ride\\library\\template\\engine\\SmartyEngine",
             "id": "smarty",
             "calls": [
@@ -72,7 +72,21 @@
         {
             "interfaces": "ride\\library\\cache\\control\\CacheControl",
             "class": "ride\\application\\cache\\control\\SmartyCacheControl",
-            "id": "smarty"
-        }         
+            "id": "smarty",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "log",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "ride\\library\\log\\Log"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
