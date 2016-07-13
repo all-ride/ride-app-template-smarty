@@ -2,7 +2,7 @@
     "name": "ride/app-template-smarty",
     "description": "Smarty template engine integration for a Ride application.",
     "license": "MIT",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "authors": [
         {
             "name": "Joris Vandeweerd",
