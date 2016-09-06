@@ -1,3 +1,4 @@
 {
-    "template.smarty.directory.compile": "%application%/data/cache/smarty/compile"
+    "template.smarty.directory.compile": "%application%/data/cache/smarty/compile",
+    "template.smarty.escape_html": false
 }

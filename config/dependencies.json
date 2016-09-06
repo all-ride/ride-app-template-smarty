@@ -52,6 +52,13 @@
                                 "interface": "ride\\library\\system\\file\\File",
                                 "id": "smarty.compile"
                             }
+                        },
+                        {
+                            "name": "escapeHtml",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "template.smarty.escape_html"
+                            }
                         }
                     ]
                 },
