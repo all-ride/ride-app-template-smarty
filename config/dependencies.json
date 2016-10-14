@@ -57,7 +57,8 @@
                             "name": "escapeHtml",
                             "type": "parameter",
                             "properties": {
-                                "key": "template.smarty.escape_html"
+                                "key": "template.smarty.escape",
+                                "default": false
                             }
                         }
                     ]
