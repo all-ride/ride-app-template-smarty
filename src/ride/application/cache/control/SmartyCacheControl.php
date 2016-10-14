@@ -2,8 +2,11 @@
 
 namespace ride\application\cache\control;
 
+use ride\library\log\Log;
 use ride\library\template\engine\SmartyEngine;
 use ride\library\system\file\FileSystem;
+
+use \Exception;
 
 /**
  * Cache control implementation for Smarty
@@ -32,11 +35,13 @@ class SmartyCacheControl extends AbstractCacheControl {
      * Constructs a new translation cache control
      * @param \ride\library\template\engine\SmartyEngine $engine
      * @param \ride\library\system\file\FileSystem $fileSystem
+     * @param \ride\library\log\Log $log
      * @return null
      */
-    public function __construct(SmartyEngine $engine, FileSystem $fileSystem) {
+    public function __construct(SmartyEngine $engine, FileSystem $fileSystem, Log $log = null) {
         $this->engine = $engine;
         $this->fileSystem = $fileSystem;
+        $this->log = $log;
     }
 
     /**
@@ -53,8 +58,18 @@ class SmartyCacheControl extends AbstractCacheControl {
      */
     public function clear() {
         $directory = $this->fileSystem->getFile($this->engine->getSmarty()->compile_dir);
-        if ($directory->exists()) {
+        if (!$directory->exists()) {
+            return;
+        }
+
+        // sometimes the cache directory is stale through nfs or another server
+        // causing this delete call to crash
+        try {
             $directory->delete();
+        } catch (Exception $exception) {
+            if ($this->log) {
+                $this->log->logException($exception);
+            }
         }
     }
 
