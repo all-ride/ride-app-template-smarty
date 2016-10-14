@@ -1,0 +1,4 @@
+template.smarty.directory.compile   Path to the compile directory
+template.smarty.escape              Flag to see if auto escaping is enabled (Defaults to false)
+template.smarty.plugin.%namespace%  Path to a Smarty plugin directory
+system.directory.view.smarty        Relative path to the Smarty view directory (Defaults to view/smarty)
