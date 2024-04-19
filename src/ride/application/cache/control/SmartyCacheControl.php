@@ -30,6 +30,7 @@ class SmartyCacheControl extends AbstractCacheControl {
      * @var \ride\library\system\file\FileSystem
      */
     private $fileSystem;
+    private $log;
 
     /**
      * Constructs a new translation cache control
@@ -57,7 +58,7 @@ class SmartyCacheControl extends AbstractCacheControl {
      * @return null
      */
     public function clear() {
-        $directory = $this->fileSystem->getFile($this->engine->getSmarty()->compile_dir);
+        $directory = $this->fileSystem->getFile($this->engine->getSmarty()->getCompileDir());
         if (!$directory->exists()) {
             return;
         }
